@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="typewriter">
+      <div>
+        <p>CSS Typewriter Effect</p>
+      </div>
+    </div>
+    <style>
+      .typewriter {
+        display: flex;
+        justify-content: center;
+      }
+
+      .typewriter p {
+        font-family: monospace;
+        font-size: 1.5rem;
+        margin-inline: auto;
+        overflow: hidden;
+        /* Keeps on a single line */
+        white-space: nowrap;
+        /* The cursor */
+        border-right: 1px solid;
+        /* steps = number of chars */
+        animation: typing 1s steps(22) forwards, blink 1s step-end infinite;
+      }
+
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+        to {
+          width: 100%;
+        }
+      }
+
+      @keyframes blink {
+        50% {
+          border-color: transparent;
+        }
+      }
+    </style>
+  </body>
+</html>

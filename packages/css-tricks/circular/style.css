@@ -1,0 +1,76 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+:root {
+  --bg: rgb(10, 10, 10);
+}
+
+body {
+  height: 100dvh;
+  display: grid;
+  place-content: center;
+  background-color: var(--bg);
+}
+
+.wrapper {
+  width: 400px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.outer {
+  width: 400px;
+  height: 400px;
+  /* border: 1px solid white; */
+  border-radius: 50%;
+  padding: 30px;
+  box-shadow: -1px -1px 5px 0 rgb(8, 8, 8), 3px 3px 6px black;
+}
+
+.inner {
+  width: 340px;
+  height: 340px;
+  /* border: 1px solid white; */
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset -1px -1px 5px 0 rgb(8, 8, 8), inset 3px 3px 6px black;
+}
+
+#number {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: lightyellow;
+}
+
+svg {
+  position: absolute;
+}
+
+circle {
+  fill: none;
+  stroke: url(#linearGradient);
+  stroke-width: 30px;
+  stroke-dasharray: 1165;
+  stroke-dashoffset: 1165;
+  stroke-linecap: round;
+  animation: anim 1s ease forwards;
+}
+
+@keyframes anim {
+  100% {
+    /* 407.75 / 1165 * 100 = 35[%] */
+    stroke-dashoffset: 407.75;
+  }
+}
